@@ -10,6 +10,8 @@
   --color-border: #e3e5e8;
   --color-danger: #b42318;
   --color-success: #067647;
+  --color-focus: #2f6fde;
+  --color-danger-text: #b42318;
 
   --radius: 8px;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
@@ -31,6 +33,9 @@
   --color-text: #e8eaed;
   --color-muted: #9aa0a6;
   --color-border: #33373c;
+  --color-danger: #d92d20;
+  --color-focus: #8ab4f8;
+  --color-danger-text: #f97066;
   --shadow: none;
 }
 
@@ -72,4 +77,123 @@ textarea {
 
 img {
   max-width: 100%;
+}
+
+/* ---------- Shared UI: buttons, form fields, cards ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, filter 0.15s;
+}
+
+.btn:hover {
+  border-color: var(--color-muted);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-primary-contrast);
+}
+
+.btn-primary:hover {
+  border-color: var(--color-primary);
+  filter: brightness(1.12);
+}
+
+.btn-danger {
+  background: var(--color-danger);
+  border-color: var(--color-danger);
+  color: #ffffff;
+}
+
+.btn-danger:hover {
+  border-color: var(--color-danger);
+  filter: brightness(1.1);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: transparent;
+}
+
+.btn-ghost:hover {
+  background: var(--color-border);
+  border-color: transparent;
+}
+
+.btn-sm {
+  padding: 4px 10px;
+  font-size: 0.875rem;
+}
+
+.btn:focus-visible,
+.input:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: var(--space-2);
+}
+
+.field label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+textarea.input {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.input[aria-invalid='true'] {
+  border-color: var(--color-danger);
+}
+
+.field-error {
+  margin: 0;
+  color: var(--color-danger-text);
+  font-size: 0.85rem;
+}
+
+.card {
+  padding: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  box-shadow: var(--shadow);
+}
+
+.text-muted {
+  color: var(--color-muted);
 }
