@@ -1,0 +1,34 @@
+.card {
+  display: block;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.card:hover {
+  border-color: var(--color-muted);
+}
+
+.card p {
+  margin: 8px 0 0;
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.125rem;
+  word-break: break-word;
+}
+
+.badge {
+  flex-shrink: 0;
+  padding: 0 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
