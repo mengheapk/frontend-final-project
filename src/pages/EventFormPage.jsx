@@ -38,7 +38,7 @@ export default function EventFormPage() {
   const initialValues = isEdit
     ? {
         title: event.title,
-        description: event.description,
+        description: event.description ?? '',
         location: event.location,
         category: event.category,
         date: event.date,
