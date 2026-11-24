@@ -1,0 +1,49 @@
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.section {
+  margin-bottom: var(--space-2);
+  padding: var(--space-3);
+}
+
+.section h2 {
+  font-size: 1.125rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.saved {
+  color: var(--color-success);
+  font-weight: 500;
+}
+
+[data-theme='dark'] .saved {
+  color: #47cd89;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.row p {
+  margin: 0;
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.label {
+  font-weight: 600;
+}
