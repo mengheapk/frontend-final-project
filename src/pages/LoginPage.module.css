@@ -1,0 +1,36 @@
+.page {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--space-4);
+}
+
+.panel {
+  width: 100%;
+  max-width: 420px;
+  padding: var(--space-3);
+}
+
+.intro {
+  margin: 0 0 var(--space-3);
+}
+
+.submit {
+  width: 100%;
+}
+
+.demo {
+  margin-top: var(--space-3);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-border);
+}
+
+.demo p {
+  margin: 0 0 var(--space-1);
+  font-size: 0.9rem;
+}
+
+.demoButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
