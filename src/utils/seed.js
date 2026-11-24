@@ -16,7 +16,7 @@ export function createSeedEvents() {
       description: 'Review React hooks and context before the final project deadline.',
       location: 'AUPP Library, Room 3',
       category: 'Study',
-      date: '2026-11-23',
+      date: '2026-12-23',
       startTime: '14:00',
       endTime: '16:00',
       rsvps: [
@@ -38,6 +38,9 @@ export function createSeedEvents() {
       date: '2027-02-07',
       startTime: '17:30',
       endTime: '19:00',
+      rsvps: [
+        { userId: 'demo-boromey', name: 'Boromey Chan', status: 'maybe', respondedAt: now },
+      ],
     },
     {
       ...base,
@@ -50,6 +53,9 @@ export function createSeedEvents() {
       date: '2026-12-25',
       startTime: '18:30',
       endTime: '21:00',
+      rsvps: [
+        { userId: 'demo-sievyiek', name: 'Sievyiek Chhea', status: 'going', respondedAt: now },
+      ],
     },
     {
       ...base,
