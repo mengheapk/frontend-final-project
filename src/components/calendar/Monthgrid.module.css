@@ -1,0 +1,39 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.weekday {
+  padding: 8px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.list {
+  display: none;
+  gap: 8px;
+}
+
+.listDay {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.listEvents {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    display: none;
+  }
+
+  .list {
+    display: grid;
+  }
+}
