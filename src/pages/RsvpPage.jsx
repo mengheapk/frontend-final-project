@@ -1,16 +1,64 @@
-import { useParams } from 'react-router-dom'
-import useDocumentTitle from '../hooks/useDocumentTitle'
+import { useEffect } from 'react';
+import { Link, useParams, useSearchParams } from 'react-router-dom';
+import { format, parseISO } from 'date-fns';
+import { useEvents } from '../context/EventsContext';
+import useDocumentTitle from '../hooks/useDocumentTitle';
+import { decodeEvent } from '../utils/share';
 import RsvpButtons from '../components/rsvp/RsvpButtons'
+import styles from './RsvpPage.module.css';
 
 export default function RsvpPage() {
-  const { id } = useParams()
-  useDocumentTitle('RSVP')
+  const { id } = useParams();
+  const [searchParams] = useSearchParams();
+  const { getEvent, importEvent } = useEvents();
 
+  const savedEvent = getEvent(id);
+  const code = searchParams.get('e');
+  const linkEvent = code ? decodeEvent(code) : null;
+
+  let event = null;
+  if (savedEvent) {
+    event = savedEvent;
+  } else if (linkEvent && linkEvent.id === id) {
+    event = linkEvent;
+  }
+
+  useDocumentTitle(event ? event.title : 'Event not found');
+  useEffect(() => {
+    if (!savedEvent && event) {
+      importEvent(event);
+    }
+  }, [savedEvent, event, importEvent]);
+
+  if (!event) {
+    return (
+      <main className={styles.page}>
+        <div className="card">
+          <h1>We could not open this event</h1>
+          <p className="text-muted">The link looks broken or incomplete. Ask the host to send it again.</p>
+          <Link to="/" className="btn btn-primary">
+            Go to home
+          </Link>
+        </div>
+      </main>
+    );
+  }
   return (
-    <section>
-      <h1>RSVP</h1>
-      <p>Coming in B2.</p>
-      <RsvpButtons eventId={id} />
-    </section>
-  )
+  <main className={styles.page}>
+    <div className="card">
+      <h1>{event.title}</h1>
+      <p className="text-muted">
+        {format(parseISO(event.date), 'EEEE, MMMM d, yyyy')} · {event.startTime} - {event.endTime}
+      </p>
+      <p>{event.location}</p>
+      <p className="text-muted">{event.category}</p>
+        {event.description && <p>{event.description}
+      </p>}
+    </div>
+    <div className="card">
+      <h2>Will you come?</h2>
+      <RsvpButtons eventId={event.id} />
+    </div>
+  </main>
+  );
 }
