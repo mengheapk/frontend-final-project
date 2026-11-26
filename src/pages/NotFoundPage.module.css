@@ -1,0 +1,35 @@
+.page {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--space-4);
+}
+
+.panel {
+  width: 100%;
+  max-width: 480px;
+  padding: var(--space-4) var(--space-3);
+  text-align: center;
+}
+
+.code {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-primary);
+}
+
+[data-theme='dark'] .code {
+  color: var(--color-text);
+}
+
+.panel p {
+  margin: 0 0 var(--space-3);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-1);
+}
