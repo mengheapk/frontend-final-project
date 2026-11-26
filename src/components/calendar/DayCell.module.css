@@ -1,7 +1,8 @@
 .cell {
   min-height: 96px;
   padding: 8px;
-  border: 1px solid var(--color-muted);
+  border: 1px solid var(--color-border);
+  margin: 0 -1px -1px 0;
   background: var(--color-surface);
   color: var(--color-text);
   display: flex;
@@ -16,6 +17,8 @@
 
 .today {
   border: 2px solid var(--color-secondary);
+  position: relative;
+  z-index: 1;
 }
 
 .today .number {
@@ -56,4 +59,8 @@
 
 .more {
   font-size: 0.75rem;
+}
+
+[data-theme='dark'] .event {
+  color: var(--color-text);
 }

@@ -1,6 +1,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
+  padding: 0 1px 1px 0;
 }
 
 .weekday {
