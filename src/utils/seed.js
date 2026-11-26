@@ -1,6 +1,7 @@
 export const seedUsers = [
   { id: 'demo-boromey', name: 'Boromey Chan', email: 'boromey@aupp.edu.kh' },
   { id: 'demo-sievyiek', name: 'Sievyiek Chhea', email: 'sievyiek@aupp.edu.kh' },
+  { id: 'demo-dara', name: 'Dara Sok', email: 'dara.sok@example.com' },
 ]
 
 export function createSeedEvents() {
@@ -21,10 +22,12 @@ export function createSeedEvents() {
       endTime: '16:00',
       rsvps: [
         { userId: 'demo-sievyiek', name: 'Sievyiek Chhea', status: 'going', respondedAt: now },
+        { userId: 'demo-dara', name: 'Dara Sok', status: 'maybe', respondedAt: now },
       ],
       tasks: [
         { id: crypto.randomUUID(), title: 'Book the room', assigneeId: 'demo-boromey', dueDate: '2026-11-19', done: true },
         { id: crypto.randomUUID(), title: 'Prepare practice questions', assigneeId: 'demo-sievyiek', dueDate: '2026-11-23', done: false },
+        { id: crypto.randomUUID(), title: 'Print last year\'s exam', assigneeId: 'demo-dara', dueDate: '2026-12-21', done: false },
       ],
     },
     {
@@ -40,6 +43,7 @@ export function createSeedEvents() {
       endTime: '19:00',
       rsvps: [
         { userId: 'demo-boromey', name: 'Boromey Chan', status: 'maybe', respondedAt: now },
+        { userId: 'demo-dara', name: 'Dara Sok', status: 'going', respondedAt: now },
       ],
     },
     {
@@ -55,6 +59,12 @@ export function createSeedEvents() {
       endTime: '21:00',
       rsvps: [
         { userId: 'demo-sievyiek', name: 'Sievyiek Chhea', status: 'going', respondedAt: now },
+        { userId: 'demo-dara', name: 'Dara Sok', status: 'declined', respondedAt: now },
+      ],
+      tasks: [
+        { id: crypto.randomUUID(), title: 'Order the cake', assigneeId: 'demo-boromey', dueDate: '2026-12-22', done: false },
+        { id: crypto.randomUUID(), title: 'Buy decorations', assigneeId: 'demo-sievyiek', dueDate: '2026-12-20', done: false },
+        { id: crypto.randomUUID(), title: 'Make a playlist', assigneeId: 'demo-dara', dueDate: '', done: false },
       ],
     },
     {
@@ -92,6 +102,82 @@ export function createSeedEvents() {
       date: '2026-12-10',
       startTime: '19:00',
       endTime: '21:00',
+      rsvps: [
+        { userId: 'demo-dara', name: 'Dara Sok', status: 'going', respondedAt: now },
+      ],
+      tasks: [
+        { id: crypto.randomUUID(), title: 'Reserve a table', assigneeId: 'demo-boromey', dueDate: '2026-12-05', done: false },
+      ],
+    },
+    {
+      ...base,
+      id: crypto.randomUUID(),
+      ownerId: 'demo-dara',
+      title: 'Internship info session',
+      description: 'Local companies share internship openings for next semester. Bring a printed CV.',
+      location: 'AUPP Auditorium',
+      category: 'Work',
+      date: '2026-12-02',
+      startTime: '09:00',
+      endTime: '11:00',
+      rsvps: [
+        { userId: 'demo-sievyiek', name: 'Sievyiek Chhea', status: 'going', respondedAt: now },
+        { userId: 'demo-boromey', name: 'Boromey Chan', status: 'maybe', respondedAt: now },
+      ],
+      tasks: [
+        { id: crypto.randomUUID(), title: 'Email the companies', assigneeId: 'demo-dara', dueDate: '2026-11-28', done: true },
+        { id: crypto.randomUUID(), title: 'Prepare questions for companies', assigneeId: 'demo-sievyiek', dueDate: '2026-12-01', done: false },
+      ],
+    },
+    {
+      ...base,
+      id: crypto.randomUUID(),
+      ownerId: 'demo-dara',
+      title: 'Badminton doubles',
+      description: 'Friendly doubles games. Rackets available, bring your own shuttlecocks if you have them.',
+      location: 'Olympic Stadium, Phnom Penh',
+      category: 'Sports',
+      date: '2026-12-05',
+      startTime: '17:00',
+      endTime: '19:00',
+      rsvps: [
+        { userId: 'demo-boromey', name: 'Boromey Chan', status: 'going', respondedAt: now },
+        { userId: 'demo-sievyiek', name: 'Sievyiek Chhea', status: 'declined', respondedAt: now },
+      ],
+    },
+    {
+      ...base,
+      id: crypto.randomUUID(),
+      ownerId: 'demo-dara',
+      title: 'ដំណើរកម្សាន្តចូលឆ្នាំខ្មែរ · Khmer New Year trip',
+      description: 'ដំណើរទៅសៀមរាប។ A group trip to Siem Reap for Khmer New Year.',
+      location: 'សៀមរាប · Siem Reap',
+      category: 'Other',
+      date: '2027-04-14',
+      startTime: '07:00',
+      endTime: '18:00',
+      rsvps: [
+        { userId: 'demo-boromey', name: 'Boromey Chan', status: 'going', respondedAt: now },
+        { userId: 'demo-sievyiek', name: 'Sievyiek Chhea', status: 'maybe', respondedAt: now },
+      ],
+      tasks: [
+        { id: crypto.randomUUID(), title: 'Book the minivan', assigneeId: 'demo-dara', dueDate: '2027-03-31', done: false },
+      ],
+    },
+    {
+      ...base,
+      id: crypto.randomUUID(),
+      ownerId: 'demo-dara',
+      title: 'Riverside picnic',
+      description: 'Picnic by the river with snacks and games.',
+      location: 'Sisowath Quay, Phnom Penh',
+      category: 'Other',
+      date: '2026-11-08',
+      startTime: '16:00',
+      endTime: '18:00',
+      rsvps: [
+        { userId: 'demo-boromey', name: 'Boromey Chan', status: 'going', respondedAt: now },
+      ],
     },
   ]
 }
