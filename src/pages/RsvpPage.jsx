@@ -48,7 +48,7 @@ return (
           <div className="card">
            <h1>{event.title}</h1>
            <p className="text-muted">
-             {format(parseISO(event.date), 'EEEE, MMMM d, yyyy')} · {event.startTime} - {event.endTime}
+            {format(parseISO(event.date), 'EEEE, d MMMM yyyy')} · {event.startTime} – {event.endTime}
            </p>
            <p>{event.location}</p>
            <p className="text-muted">{event.category}</p>
