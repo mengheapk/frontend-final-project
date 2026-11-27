@@ -11,7 +11,7 @@ export function createSeedEvents() {
   return [
     {
       ...base,
-      id: crypto.randomUUID(),
+      id: 'seed-study-group',
       ownerId: 'demo-boromey',
       title: 'Study group: Frontend final',
       description: 'Review React hooks and context before the final project deadline.',
@@ -32,7 +32,7 @@ export function createSeedEvents() {
     },
     {
       ...base,
-      id: crypto.randomUUID(),
+      id: 'seed-grammys',
       ownerId: 'demo-sievyiek',
       title: 'Grammy Awards',
       description: 'The 69th Annual Grammy Awards.',
@@ -48,7 +48,7 @@ export function createSeedEvents() {
     },
     {
       ...base,
-      id: crypto.randomUUID(),
+      id: 'seed-christmas-dinner',
       ownerId: 'demo-boromey',
       title: 'Christmas Dinner',
       description: 'Christmas dinner party at Boromey\'s house.',
@@ -69,7 +69,7 @@ export function createSeedEvents() {
     },
     {
       ...base,
-      id: crypto.randomUUID(),
+      id: 'seed-last-minute-meeting',
       ownerId: 'demo-sievyiek',
       title: 'Last-minute Meeting',
       description: 'Last-minute meeting to finalize group project.',
@@ -81,7 +81,7 @@ export function createSeedEvents() {
     },
     {
       ...base,
-      id: crypto.randomUUID(),
+      id: 'seed-midterm-celebration',
       ownerId: 'demo-sievyiek',
       title: 'Midterm Celebration',
       description: 'Small get-together after midterms.',
@@ -93,7 +93,7 @@ export function createSeedEvents() {
     },
     {
       ...base,
-      id: crypto.randomUUID(),
+      id: 'seed-final-celebration',
       ownerId: 'demo-boromey',
       title: 'Final Celebration',
       description: 'Small get-together after finals.',
@@ -111,7 +111,7 @@ export function createSeedEvents() {
     },
     {
       ...base,
-      id: crypto.randomUUID(),
+      id: 'seed-intership-session',
       ownerId: 'demo-dara',
       title: 'Internship info session',
       description: 'Local companies share internship openings for next semester. Bring a printed CV.',
@@ -131,7 +131,7 @@ export function createSeedEvents() {
     },
     {
       ...base,
-      id: crypto.randomUUID(),
+      id: 'seed-badminton',
       ownerId: 'demo-dara',
       title: 'Badminton doubles',
       description: 'Friendly doubles games. Rackets available, bring your own shuttlecocks if you have them.',
@@ -147,7 +147,7 @@ export function createSeedEvents() {
     },
     {
       ...base,
-      id: crypto.randomUUID(),
+      id: 'seed-khmer-new-year-trip',
       ownerId: 'demo-dara',
       title: 'ដំណើរកម្សាន្តចូលឆ្នាំខ្មែរ · Khmer New Year trip',
       description: 'ដំណើរទៅសៀមរាប។ A group trip to Siem Reap for Khmer New Year.',
@@ -166,7 +166,7 @@ export function createSeedEvents() {
     },
     {
       ...base,
-      id: crypto.randomUUID(),
+      id: 'seed-riverside-picnic',
       ownerId: 'demo-dara',
       title: 'Riverside picnic',
       description: 'Picnic by the river with snacks and games.',

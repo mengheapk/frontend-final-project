@@ -13,7 +13,7 @@ export default function EventsPage() {
 
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('All');
-  const [timeFilter, setTimeFilter] = useState('all');
+  const [timeFilter, setTimeFilter] = useState('upcoming');
 
   const today = startOfToday();
   const query = search.trim().toLowerCase();
