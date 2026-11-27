@@ -23,7 +23,7 @@ export default function CalendarPage() {
   }, [events]);
 
   return (
-    <main className={styles.page}>
+    <section className={styles.page}>
       <div className={styles.toolbar}>
         <h1 className={styles.title}>{format(month, 'MMMM yyyy')}</h1>
         <div className={styles.buttons}>
@@ -51,6 +51,6 @@ export default function CalendarPage() {
         </div>
       </div>
       <MonthGrid month={month} eventsByDate={eventsByDate} />
-    </main>
+    </section>
   );
 }
