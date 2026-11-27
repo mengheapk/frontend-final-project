@@ -111,7 +111,7 @@ export function createSeedEvents() {
     },
     {
       ...base,
-      id: 'seed-intership-session',
+      id: 'seed-internship-session',
       ownerId: 'demo-dara',
       title: 'Internship info session',
       description: 'Local companies share internship openings for next semester. Bring a printed CV.',
