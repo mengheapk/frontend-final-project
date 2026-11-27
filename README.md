@@ -19,6 +19,18 @@ A React web app for creating, managing and sharing events, with RSVPs, a monthly
 - Data saved in the browser between sessions (localStorage)
 - Responsive layout with a mobile menu, and a 404 page
 
+
+## How to use the app
+
+1. Log in with a demo account (see below) or sign up with any name and email.
+2. Open **Events** to browse, search and filter, or click **New event** to create one.
+3. Open an event to edit or delete it (owners only), share it, RSVP, or add tasks.
+4. Use **Calendar** for a month view, **Dashboard** for your upcoming events, RSVPs and open tasks, and **Profile** to change your name or switch between light and dark theme.
+
+### Trying the share link
+
+On an event page, use the share button to copy the link, then open it in a private window or another browser. The event opens on the public RSVP page, where you can answer as a guest or while logged in.
+
 ## Getting started
 
 Requires Node.js 20.19+ or 22.12+.
