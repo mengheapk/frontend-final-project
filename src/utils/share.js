@@ -1,15 +1,15 @@
 import { isValid, parseISO } from 'date-fns';
 
 const SHARE_FIELDS = [
-     'id',
-     'ownerId',
-     'title',
-     'description',
-     'location',
-     'category',
-     'date',
-     'startTime',
-     'endTime'
+    'id',
+    'ownerId',
+    'title',
+    'description',
+    'location',
+    'category',
+    'date',
+    'startTime',
+    'endTime'
 ];
 
 export function encodeEvent(event) {
@@ -22,9 +22,9 @@ export function encodeEvent(event) {
 
 export function decodeEvent(code) {
     try {
-     const base64 = code.replace(/-/g, '+').replace(/_/g, '/');
-     const binary = atob(base64);
-     const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0));
+        const base64 = code.replace(/-/g, '+').replace(/_/g, '/');
+        const binary = atob(base64);
+        const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0));
         const data = JSON.parse(new TextDecoder().decode(bytes));
         if (!data.id || !data.title || typeof data.date !== 'string' || !isValid(parseISO(data.date))) return null;
         return { ...data, rsvps: [], tasks: [] };
